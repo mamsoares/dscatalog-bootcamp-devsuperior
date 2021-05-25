@@ -53,7 +53,6 @@ public class ProductService {
 		return new ProductDTO(entity);
 	}
 
-	@SuppressWarnings("deprecation")
 	@Transactional
 	public ProductDTO update(Long id, ProductDTO dto) {
 		try {
@@ -88,7 +87,6 @@ public class ProductService {
 		
 		entity.getCategories().clear();
 		for (CategoryDTO catDto : dto.getCategories()) {
-			@SuppressWarnings("deprecation")
 			Category category = categoryRepository.getOne(catDto.getId());
 			entity.getCategories().add(category);
 		}

@@ -46,7 +46,6 @@ public class CategoryService {
 		return new CategoryDTO(entity);
 	}
 
-	@SuppressWarnings("deprecation")
 	@Transactional
 	public CategoryDTO update(Long id, CategoryDTO dto) {
 		try {
